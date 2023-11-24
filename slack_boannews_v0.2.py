@@ -93,7 +93,7 @@ class NewsScraper:
         return articles
 
     def send_to_slack(self, articles):
-        slack_token = 'xoxb-6172155970928-6238426770419-xYkeOXQVoFu5f0XgNA1yayU2'
+        slack_token = 'xoxb-6172155970928-6238426770419-QYI6FjsZAUXtmNQZdATH8YiY'
         client = WebClient(token=slack_token)
 
         for article_item in articles:
@@ -104,7 +104,7 @@ class NewsScraper:
                 if os.path.exists(image_path):
                     formatted_date = article_item.get('작성일자')
                     message = (
-                        "=" * 50 + "\n"
+                        "=" * 33 + "\n"
                         f"◈제목: {article_item.get('제목', '')}\n"
                         f"◈내용: {article_item.get('내용', '')}\n"
                         f"◈Link: {article_item.get('Link', '')}\n"
@@ -122,7 +122,7 @@ class NewsScraper:
                 else:
                     formatted_date = article_item.get('작성일자')
                     message = (
-                        "=" * 50 + "\n"
+                        "=" * 33 + "\n"
                         f"◈제목: {article_item.get('제목', '')}\n"
                         f"◈내용: {article_item.get('내용', '')}\n"
                         f"◈Link: {article_item.get('Link', '')}\n"
