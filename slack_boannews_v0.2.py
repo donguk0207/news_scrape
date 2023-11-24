@@ -93,7 +93,7 @@ class NewsScraper:
         return articles
 
     def send_to_slack(self, articles):
-        slack_token = 'xoxb-6172155970928-6238426770419-QYI6FjsZAUXtmNQZdATH8YiY'
+        slack_token = 'token'
         client = WebClient(token=slack_token)
 
         for article_item in articles:
